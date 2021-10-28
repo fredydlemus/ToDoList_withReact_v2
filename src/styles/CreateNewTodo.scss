@@ -1,0 +1,29 @@
+.CreateNewTodo {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  align-self: flex-start;
+  justify-content: space-evenly;
+  p {
+    color: var(--white);
+  }
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--skyblue);
+    border: 1px solid black;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    font-size: 32px;
+    color: var(--white);
+    font-weight: bold;
+    cursor: pointer;
+    transform: rotate(0);
+    transition: 0.3s;
+  }
+  button:hover {
+    transform: rotate(224deg);
+  }
+}

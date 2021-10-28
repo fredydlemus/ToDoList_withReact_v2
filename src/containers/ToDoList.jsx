@@ -1,8 +1,9 @@
 import React from 'react'
+import '../styles/ToDoList.scss';
 
 const ToDoList = () =>{
     return(
-        <div>Here ToDoList</div>
+        <section className='ToDoList'>List</section>
     );
 }
 
