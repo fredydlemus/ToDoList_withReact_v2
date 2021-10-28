@@ -1,0 +1,48 @@
+.ToDoItem {
+  list-style: none;
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  &-description {
+    background-color: var(--white);
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
+  &-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--blue-soft);
+    height: 48px;
+    border-top: 3px solid black;
+  }
+  span {
+    width: 34px;
+    height: 34px;
+    margin: 0 8px 0 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  span:nth-child(1) {
+    border: 2px solid rgb(255, 5, 5);
+    color: white;
+  }
+
+  span:nth-child(2) {
+    border: 2px solid green;
+    color: white;
+    transform: rotate(180deg);
+  }
+}
