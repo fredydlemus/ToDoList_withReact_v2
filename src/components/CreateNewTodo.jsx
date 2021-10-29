@@ -1,12 +1,23 @@
 import React from 'react'
+import AppContext from '../context/AppContext';
 import '../styles/CreateNewTodo.scss';
 
 
-const CreateNewTodo = () =>{
+const CreateNewTodo = (props) =>{
+
+    const {modifyModal} = React.useContext(AppContext);
+    
+
+    const handleButton = () =>{
+        modifyModal();
+    }
+
     return(
         <section className='CreateNewTodo'>
             <p>Create a new Todo</p>
-            <button>+</button>
+            <button
+                onClick = {handleButton}
+            >+</button>
         </section>
     );
 }
