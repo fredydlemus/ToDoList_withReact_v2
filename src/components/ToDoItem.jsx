@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/ToDoItem.scss';
+import {AiFillCheckCircle, AiFillCloseCircle} from 'react-icons/ai';
 
 const ToDoItem = (props) =>{
     return(
@@ -9,14 +10,16 @@ const ToDoItem = (props) =>{
                 <p>{props.text}</p>
             </div>
             <div className='ToDoItem-buttons'>
+                <AiFillCloseCircle
+                    className='button'
+                    size='28px'
+                    color='red' />
                 
-                <span>
-                    <div>X</div>
-                </span>
-                
-                <span>
-                    <div>ᄼ</div>
-                </span>
+                <AiFillCheckCircle 
+                    className='button'
+                    size='28px'
+                    color={`${!props.completed? 'green' : 'gray'}`}
+                />
             </div>
             
             

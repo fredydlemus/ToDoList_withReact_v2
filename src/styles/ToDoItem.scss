@@ -28,36 +28,8 @@
 
     height: 38px;
     border-top: 1px solid gray;
-    span {
-      width: 28px;
-      height: 28px;
+    .button {
       margin: 0 8px 0 8px;
-      border-radius: 50%;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 18px;
-      div {
-        display: flex;
-        justify-items: center;
-        align-items: center;
-      }
-    }
-    span:nth-child(1) {
-      background-color: red;
-      color: white;
-    }
-
-    span:nth-child(2) {
-      background-color: rgb(41, 196, 41);
-
-      transform: rotate(180deg);
-      color: white;
-    }
-    p {
-      color: var(--white);
     }
   }
   &-complete {
@@ -70,13 +42,6 @@
     }
     .ToDoItem-buttons {
       background-color: var(--gray);
-
-      span:nth-child(1) {
-        background-color: red;
-      }
-      span:nth-child(2) {
-        background-color: gray;
-      }
     }
   }
 }
