@@ -39,6 +39,9 @@
       border: none;
       font-weight: bold;
     }
+    button:nth-child(1) {
+      background-color: gray;
+    }
     button:nth-child(2) {
       background-color: var(--skyblue);
       -webkit-box-shadow: inset -1px 3px 8px 5px #1f87ff,
