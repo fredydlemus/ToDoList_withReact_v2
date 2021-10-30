@@ -9,11 +9,11 @@ const ToDoItem = (props) =>{
                 <p>{props.text}</p>
             </div>
             <div className='ToDoItem-buttons'>
-                <p>Delete</p>
+                
                 <span>
                     <div>X</div>
                 </span>
-                <p>Complete</p>
+                
                 <span>
                     <div>ᄼ</div>
                 </span>
