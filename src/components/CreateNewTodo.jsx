@@ -14,7 +14,7 @@ const CreateNewTodo = (props) =>{
 
     return(
         <section className='CreateNewTodo'>
-            <p>Create a new Todo</p>
+            
             <button
                 onClick = {handleButton}
             >+</button>

@@ -1,0 +1,13 @@
+.ToDoSearch {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  input {
+    border-radius: 10px;
+    border: 1px solid gray;
+    height: 40px;
+    padding: 5px;
+  }
+}

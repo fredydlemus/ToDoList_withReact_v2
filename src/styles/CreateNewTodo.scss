@@ -1,7 +1,7 @@
 .CreateNewTodo {
   display: flex;
   align-items: center;
-  width: 60%;
+  width: 100%;
   align-self: flex-start;
   justify-content: space-evenly;
 
@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: center;
     background-color: var(--skyblue);
-    border: 1px solid black;
+    border: none;
     width: 34px;
     height: 34px;
     border-radius: 50%;
@@ -20,6 +20,10 @@
     cursor: pointer;
     transform: rotate(0);
     transition: 0.3s;
+    -webkit-box-shadow: inset -1px 3px 8px 5px #1f87ff, 2px 5px 16px 0px #0b325e,
+      4px 8px 15px 4px rgba(0, 0, 0, 0);
+    box-shadow: inset -1px 3px 8px 5px #1f87ff, 2px 5px 16px 0px #0b325e,
+      4px 8px 15px 4px rgba(0, 0, 0, 0);
   }
   button:hover {
     transform: rotate(224deg);

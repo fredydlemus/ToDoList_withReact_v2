@@ -1,0 +1,13 @@
+.Menu {
+  width: 100%;
+  border-top: 1px solid var(--white);
+  position: fixed;
+  bottom: 0;
+  background-color: var(--gray-color);
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  li {
+    list-style: none;
+  }
+}
