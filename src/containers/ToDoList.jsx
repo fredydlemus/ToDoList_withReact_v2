@@ -1,28 +1,17 @@
 import React from 'react'
 import ToDoItem from '../components/ToDoItem';
 import '../styles/ToDoList.scss';
+import {getTodos} from '../hooks/List';
+import AppContext from '../context/AppContext';
 
 
-const todo = [
-    {
-        text: 'ayudar a mi mama',
-        completed: false
-    },
-    {
-        text: 'Hacer la cama',
-        completed: false
-    },
-    {
-        text: 'Buscar trabajo',
-        completed: false
-    },
-    {
-        text: 'hacer dieta',
-        completed: true
-    }
-];
+
 
 const ToDoList = () =>{
+
+    const {listTodos} = React.useContext(AppContext);
+    const todo = listTodos;
+
     return(
         <section className='ToDoList'>
             <ul>

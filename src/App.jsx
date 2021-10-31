@@ -1,16 +1,21 @@
 import React from 'react'
 import Layout from './containers/Layout';
 import AppContext from './context/AppContext';
-import useModalState from './hooks/useModalState';
+import useTodosStates from './hooks/useTodoStates';
+
 import './styles/global.scss';
 
 const App = () =>{
     
-    const modalState = useModalState();
+    const todosStates = useTodosStates();
+   
 
     return(
-        <AppContext.Provider value= {modalState}>
+        <AppContext.Provider value= {todosStates}>
+            
             <Layout/>
+           
+            
         </AppContext.Provider>
         
     );

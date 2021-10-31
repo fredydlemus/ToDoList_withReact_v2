@@ -15,15 +15,11 @@
     height: 34px;
     border-radius: 50%;
     font-size: 32px;
-    color: var(--white);
+    color: black;
     font-weight: bold;
     cursor: pointer;
     transform: rotate(0);
     transition: 0.3s;
-    -webkit-box-shadow: inset -1px 3px 8px 5px #1f87ff, 2px 5px 16px 0px #0b325e,
-      4px 8px 15px 4px rgba(0, 0, 0, 0);
-    box-shadow: inset -1px 3px 8px 5px #1f87ff, 2px 5px 16px 0px #0b325e,
-      4px 8px 15px 4px rgba(0, 0, 0, 0);
   }
   button:hover {
     transform: rotate(224deg);

@@ -5,7 +5,10 @@ import '../styles/ToDoModal.scss';
 
 const Modal = () =>{
 
-    const {modifyModal} = React.useContext(AppContext);
+    const [newTodoValue, setNewTodoValue] = React.useState('');
+
+    const {modifyModal, addTodo} = React.useContext(AppContext);
+    
     
     const onCancel = (event) =>{
         event.stopPropagation();
@@ -16,25 +19,43 @@ const Modal = () =>{
         
     }
 
+    const onChange = (event) =>{
+        setNewTodoValue(event.target.value);
+    }
+
+    const onAdd = (event) =>{
+        event.preventDefault();
+        addTodo(newTodoValue);
+        modifyModal();
+
+    }
+    
+
     return reactDom.createPortal(
         <div 
             className='Modal'
             onClick={onCancel} >
             
                 <form className='Modal-form'>
-                    <label>Write a new ToDo</label>
+                    <div className='Modal-form-header'>
+                        <label>Write a new ToDo</label>
+                        <div className='Modal-buttons'>
+                            <button className='cancel-button'
+                                type='button'
+                                onClick={onCancel}
+                            >Cancel</button>
+                            <button
+                                type='submit'
+                                onClick={onAdd}
+                            >Add</button>
+                        </div>
+                    </div>
+                   
                     <textarea
                         placeholder='Do math homework'
+                        onChange={onChange}
                     ></textarea>
-                    <div className='Modal-buttons'>
-                        <button className='cancel-button'
-                            type='button'
-                            onClick={onCancel}
-                        >Cancel</button>
-                        <button
-                            type='button'
-                        >Add</button>
-                    </div>
+                    
                 </form>
             
             
