@@ -1,25 +1,32 @@
 import React from 'react';
-import { getTodos } from './List';
+import useLocalStorage from '../hooks/useLocalStorage';
 
 const initialState = false;
 
-const useModalState = () => {
-    const [openModal, setOpenModal] = React.useState(initialState);
-    const [listTodos, setListTOdos] = React.useState(getTodos());
-    const todo = listTodos;
+const useTodoState = () => {
 
+    const{
+        item,
+        saveItems,
+    } = useLocalStorage('TODOS_V1', []);
+
+    
+    
+    const [openModal, setOpenModal] = React.useState(initialState);
+    
     const modifyModal = () =>{
         setOpenModal(openModal => !openModal);
     }
 
     const addTodo = (text) =>{
-        todo.push({
+        item.push({
             completed: false,
             text,
     }
     
         )
-        setListTOdos(todo);
+        
+        saveItems(item);
         
     }
     
@@ -28,9 +35,9 @@ const useModalState = () => {
         openModal,
         modifyModal,
         addTodo,
-        listTodos,
+        item,
     }
 }
 
-export default useModalState;
+export default useTodoState;
 

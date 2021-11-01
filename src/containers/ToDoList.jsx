@@ -1,7 +1,6 @@
 import React from 'react'
 import ToDoItem from '../components/ToDoItem';
 import '../styles/ToDoList.scss';
-import {getTodos} from '../hooks/List';
 import AppContext from '../context/AppContext';
 
 
@@ -9,8 +8,9 @@ import AppContext from '../context/AppContext';
 
 const ToDoList = () =>{
 
-    const {listTodos} = React.useContext(AppContext);
-    const todo = listTodos;
+    const {item} = React.useContext(AppContext);
+    const todo = item;
+    
 
     return(
         <section className='ToDoList'>

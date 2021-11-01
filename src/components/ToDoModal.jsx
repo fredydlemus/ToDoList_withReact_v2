@@ -6,7 +6,6 @@ import '../styles/ToDoModal.scss';
 const Modal = () =>{
 
     const [newTodoValue, setNewTodoValue] = React.useState('');
-
     const {modifyModal, addTodo} = React.useContext(AppContext);
     
     
@@ -20,7 +19,9 @@ const Modal = () =>{
     }
 
     const onChange = (event) =>{
+        
         setNewTodoValue(event.target.value);
+       
     }
 
     const onAdd = (event) =>{
