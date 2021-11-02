@@ -12,7 +12,7 @@ const Modal = () =>{
     const onCancel = (event) =>{
         event.stopPropagation();
         if(event.target.className === 'Modal' || event.target.className === 'cancel-button'){
-            console.log(event.target.className)
+            
             modifyModal();
         }
         

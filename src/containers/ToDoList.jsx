@@ -8,9 +8,9 @@ import AppContext from '../context/AppContext';
 
 const ToDoList = () =>{
 
-    const {item} = React.useContext(AppContext);
+    const {searchedTodos} = React.useContext(AppContext);
     
-    const todos = item;
+    const todos = searchedTodos;
     
 
     return(

@@ -11,11 +11,24 @@ const useTodoState = () => {
     } = useLocalStorage('TODOS_V1', []);
 
   
-    
+    const [searchValue, setSearchValue] = React.useState('');
     const [openModal, setOpenModal] = React.useState(initialState);
     
     const finishedTodos = item.filter(todo => !!todo.completed).length;
     const totalTodos = item.length;
+    let searchedTodos = [];
+
+    if(!searchValue.length >= 1){
+        searchedTodos = item;
+    }else{
+        searchedTodos = item.filter(todo =>{
+            const todoText = todo.text.toLowerCase();
+            const searchText = searchValue.toLowerCase();
+            return todoText.includes(searchText);
+        });
+    }
+
+    
 
 
     const modifyModal = () =>{
@@ -32,7 +45,7 @@ const useTodoState = () => {
             newId = item[item.length - 1].id + 1;
         }
         
-        console.log(newId);
+        
         const newTodos = [...item];
         newTodos.push({
             completed: false,
@@ -73,7 +86,9 @@ const useTodoState = () => {
         completeTodo,
         deleteTodo,
         finishedTodos,
-        totalTodos
+        totalTodos,
+        searchedTodos,
+        setSearchValue
     }
 }
 
