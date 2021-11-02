@@ -9,17 +9,17 @@ import AppContext from '../context/AppContext';
 const ToDoList = () =>{
 
     const {item} = React.useContext(AppContext);
-    const todo = item;
-    
+    const todos = item;
+    console.log(todos);
 
     return(
         <section className='ToDoList'>
             <ul>
-                {todo.map(item => (
+                {todos.map(todo => (
                     <ToDoItem 
-                        key = {item.text}
-                        text = {item.text}
-                        completed = {item.completed}
+                        key = {todo.id}
+                        text = {todo.text}
+                        completed = {todo.completed}
                     />
                 ))}
             </ul>

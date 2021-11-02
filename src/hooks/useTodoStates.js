@@ -19,9 +19,12 @@ const useTodoState = () => {
     }
 
     const addTodo = (text) =>{
+        
         item.push({
             completed: false,
             text,
+            id: item.length + 1
+            
     }
     
         )
