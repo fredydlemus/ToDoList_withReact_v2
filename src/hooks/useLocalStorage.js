@@ -33,7 +33,7 @@ function useLocalStorage(itemName, initialValue){
             }catch(err){
                 console.log(err);
             }
-        }, 9000);
+        },3000);
         
         
 
