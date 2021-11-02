@@ -1,5 +1,4 @@
 import React from 'react'
-
 import ToDoCounter from '../components/ToDoCounter';
 import '../styles/ToDoBoard.scss'
 import ToDoList from './ToDoList';

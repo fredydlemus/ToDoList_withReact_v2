@@ -4,6 +4,7 @@ import React from 'react';
 function useLocalStorage(itemName, initialValue){
 
     const [item, setItems] = React.useState(initialValue);
+    const [todoCount, setTodoCount] = React.useState(0);
 
     React.useEffect(() =>{
         
@@ -44,6 +45,7 @@ function useLocalStorage(itemName, initialValue){
             localStorage.setItem(itemName, stringifiedTodos);
             
             setItems(newItems);
+           
             
         }catch(err){
             console.error(err);
@@ -55,6 +57,7 @@ function useLocalStorage(itemName, initialValue){
     return{
         item,
         saveItems,
+        todoCount
     }
 }
 

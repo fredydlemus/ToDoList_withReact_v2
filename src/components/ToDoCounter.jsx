@@ -1,10 +1,14 @@
 import React from 'react'
+import AppContext from '../context/AppContext';
 import '../styles/ToDoCounter.scss'
 
 const ToDoCounter = () =>{
+
+    const {totalTodos, finishedTodos} = React.useContext(AppContext);
+
     return(
         <div className='ToDoCounter'>
-            <h3>You have completed 2 of 3 ToDo's</h3>
+            <h3>You have completed {finishedTodos} of {totalTodos} ToDo's</h3>
         </div>
     );
 }

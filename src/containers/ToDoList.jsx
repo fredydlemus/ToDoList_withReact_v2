@@ -9,8 +9,9 @@ import AppContext from '../context/AppContext';
 const ToDoList = () =>{
 
     const {item} = React.useContext(AppContext);
+    
     const todos = item;
-    console.log(todos);
+    
 
     return(
         <section className='ToDoList'>
@@ -18,6 +19,7 @@ const ToDoList = () =>{
                 {todos.map(todo => (
                     <ToDoItem 
                         key = {todo.id}
+                        id={todo.id}
                         text = {todo.text}
                         completed = {todo.completed}
                     />
