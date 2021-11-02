@@ -1,0 +1,42 @@
+.ToDoLoading{
+list-style: none;
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  position: relative;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: linear-gradient(90deg, var(--gray-color), var(--skyblue));
+      background-size: 400% 400%;
+      animation: loadingAnimation 3s ease-in-out infinite;
+  
+  &-description {
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    p{
+        color: white;
+    }
+}
+    &-buttons {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        height: 38px;
+        border-top: 1px solid white;
+    }
+}
+
+@keyframes loadingAnimation {
+    0%{
+        background-position: 0% 50%;
+    }50%{
+        background-position: 100% 50%;
+    }100%{
+        background-position: 0% 50%;
+    }
+}

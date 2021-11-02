@@ -4,7 +4,7 @@ import '../styles/ToDoSearch.scss';
 
 const ToDoSearch = () =>{
 
-    const {setSearchValue} = React.useContext(AppContext);
+    const {setSearchValue, loading} = React.useContext(AppContext);
 
     const onSearchValueChange = (event) =>{
         
@@ -19,6 +19,7 @@ const ToDoSearch = () =>{
             className = 'ToDoSearch'
             placeholder = 'make the bed'
             onChange={onSearchValueChange}
+            disabled={loading}
         />
         </section>
        
