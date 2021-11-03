@@ -10,8 +10,13 @@
   padding: 16px;
   background-color: var(--skyblue-soft);
   margin-bottom: 94px;
+  .Loading{
+    width: 100%;
+  }
+  .Board-container{
+    width: 100%;
+  }
+  
 }
 
-.Loading{
-  width: 95%;
-}
+

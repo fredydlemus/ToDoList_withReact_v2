@@ -17,7 +17,7 @@ const ToDoBoard = () =>{
                     <ToDoLoading />
                     <ToDoLoading />
                 </section> : 
-                <section>
+                <section className='Board-container'>
                     <ToDoCounter />
                     <ToDoList />
                 </section>
