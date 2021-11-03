@@ -11,7 +11,14 @@
   background-color: var(--skyblue-soft);
   margin-bottom: 94px;
   .Loading{
+    display: grid;
     width: 100%;
+    @media screen and (min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (min-width: 1024px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
   .Board-container{
     width: 100%;

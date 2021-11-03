@@ -30,6 +30,13 @@
     border-top: 1px solid gray;
     .button {
       margin: 0 8px 0 8px;
+      will-change: transform;
+      transform: scale(1);
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .button:hover{
+      transform: scale(1.1);
     }
   }
   &-complete {

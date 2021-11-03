@@ -8,7 +8,8 @@ const useTodoState = () => {
     const{
         item,
         saveItems,
-        loading
+        loading,
+        error
     } = useLocalStorage('TODOS_V1', []);
 
   
@@ -90,7 +91,8 @@ const useTodoState = () => {
         totalTodos,
         searchedTodos,
         setSearchValue,
-        loading
+        loading,
+        error
     }
 }
 

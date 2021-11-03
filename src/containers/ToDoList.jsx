@@ -9,27 +9,33 @@ import CreateNewTodo from '../components/CreateNewTodo';
 
 const ToDoList = () =>{
 
-    const {searchedTodos, totalTodos} = React.useContext(AppContext);
+    const {searchedTodos, totalTodos, error} = React.useContext(AppContext);
     
     const todos = searchedTodos;
     
 
     return(
         <section className='ToDoList'>
+            {error && <p>Sorry, an error has occurred </p>}
+
             {!totalTodos ? 
                 <div className="ToDoList-empty">
                     <p>Create your first ToDo</p>
                     <CreateNewTodo />
                 </div> : 
                 <ul>
-                    {todos.map(todo => (
-                    <ToDoItem 
-                        key = {todo.id}
-                        id={todo.id}
-                        text = {todo.text}
-                        completed = {todo.completed}
-                    />
-                ))}    
+                    
+                    {searchedTodos.length === 0 ?
+                        <p>Not ToDo found :(</p> :
+                        todos.map(todo => (
+                            <ToDoItem 
+                                key = {todo.id}
+                                id={todo.id}
+                                text = {todo.text}
+                                completed = {todo.completed}
+                            />
+                        ))
+                    }    
                 </ul>}
             
         </section>
