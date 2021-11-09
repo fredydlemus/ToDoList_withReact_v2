@@ -3,15 +3,17 @@ import ToDoItem from '../components/ToDoItem';
 import '../styles/ToDoList.scss';
 import AppContext from '../context/AppContext';
 import CreateNewTodo from '../components/CreateNewTodo';
+import useGetTodos from '../hooks/useGetTodos';
 
 
-
+const API = 'http://localhost:6868/api/v1/todolist';
 
 const ToDoList = () =>{
 
     const {searchedTodos, totalTodos, error} = React.useContext(AppContext);
     
-    const todos = searchedTodos;
+    
+    const todos = useGetTodos(API);
     
 
     return(
